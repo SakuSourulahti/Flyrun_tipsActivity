@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.application.omistaja.flystride10.TipsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/backImageView"
+                android:background="@color/colorTransparent"
+                android:layout_alignBottom="@+id/imageButtonBack"
+                android:layout_alignLeft="@+id/imageButtonBack"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                />
+
+
+            <ImageButton
+                android:id="@+id/imageButtonBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ripple" />
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/layout_btn_Knee"
+        android:layout_below="@+id/my_toolbar"
+        >
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/knee_lifting_btn"
+            android:background="@color/buttonsMain"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/kneeHeaderText"
+            android:text="Lift knee"
+            android:textSize="15dp"
+            android:textColor="@color/colorBlack"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageOpen"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:background="@color/colorTransparent"
+            android:layout_marginRight="20dp"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/layout_content_knee"
+        android:layout_below="@+id/layout_btn_Knee"
+        android:background="@color/colorPrimary"
+        >
+
+
+        <TextView
+            android:id="@+id/content_knee"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentTop="true"
+            android:text=""
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/centerKnee"
+            android:layout_centerHorizontal="true"
+            />
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@+id/centerKnee"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/imageKneeBadLayout"
+            >
+
+            <ImageView
+                android:id="@+id/imageViewKneeBad"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorTransparent"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/imageViewKneeBad"
+                android:layout_above="@+id/imageViewKneeBad"
+                android:text="Bad"
+                android:id="@+id/badKnee"
+                />
+
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/centerKnee"
+            android:layout_alignParentRight="true"
+            >
+
+
+            <ImageView
+                android:id="@+id/imageViewKneeGood"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorTransparent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/imageViewKneeGood"
+                android:layout_above="@+id/imageViewKneeGood"
+                android:text="Good"
+                android:id="@+id/goodKnee"
+                />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/layout_btn_heel"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/layout_content_knee"
+        >
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/heel_btn"
+            android:background="@color/buttonsMain"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forefoot landing"
+            android:id="@+id/forefootText"
+            android:textSize="15dp"
+            android:textColor="@color/colorBlack"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageOpen1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:background="@color/colorTransparent"
+            android:layout_marginRight="20dp" />
+
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/layout_content_heel"
+        android:layout_below="@+id/layout_btn_heel"
+        android:background="@color/colorPrimary"
+        >
+
+
+        <TextView
+            android:id="@+id/content_heel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentTop="true"
+            android:text=""
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/centerHeel"
+            android:layout_centerHorizontal="true"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/centerHeel"
+            android:layout_alignParentRight="true"
+            >
+
+            <ImageView
+                android:id="@+id/imageViewHeelGood"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:background="@color/colorTransparent"
+                android:layout_above="@+id/text1Heel"
+                android:layout_centerHorizontal="true"
+                 />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/imageViewHeelGood"
+                android:layout_above="@+id/imageViewHeelGood"
+                android:text="Good"
+                android:id="@+id/goodHeel"
+                />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:id="@+id/text1Heel"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textSize="10dp"
+                android:textAlignment="center"
+                android:text=""
+                />
+
+
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@+id/centerHeel"
+            android:layout_alignParentLeft="true"
+            >
+
+            <ImageView
+                android:id="@+id/imageViewHeelBad"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:layout_above="@+id/text2Heel"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorTransparent"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/imageViewHeelBad"
+                android:layout_above="@+id/imageViewHeelBad"
+                android:text="Bad"
+                android:id="@+id/badHeel"
+                />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/text2Heel"
+                android:textSize="10dp"
+                android:textAlignment="center"
+                android:text=""
+                />
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/layout_btn_posture"
+        android:layout_below="@+id/layout_content_heel"
+        >
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:id="@+id/posture_btn"
+            android:background="@color/buttonsMain"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Straight body posture"
+            android:id="@+id/bodyHeaderText"
+            android:textSize="15dp"
+            android:textColor="@color/colorBlack"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageOpen2"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/colorTransparent"
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/layout_content_posture"
+        android:layout_below="@+id/layout_btn_posture"
+        android:background="@color/colorPrimary"
+        >
+
+
+
+        <TextView
+            android:id="@+id/content_posture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentTop="true"
+            android:text=""
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/centerPosture"
+            android:layout_centerHorizontal="true"
+            />
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@+id/centerPosture"
+            android:layout_alignParentLeft="true"
+            >
+
+            <ImageView
+                android:id="@+id/imageViewPostureBad"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/text2Posture"
+                android:background="@color/colorTransparent"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/imageViewPostureBad"
+                android:layout_above="@+id/imageViewPostureBad"
+                android:text="Bad"
+                android:id="@+id/badPosture"
+                />
+
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/text2Posture"
+                android:textSize="10dp"
+                android:textAlignment="center"
+                android:text=""
+                />
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/centerPosture"
+            android:layout_alignParentRight="true"
+            >
+
+            <ImageView
+                android:id="@+id/imageViewPostureGood"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/text1Posture"
+                android:background="@color/colorTransparent"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/imageViewPostureGood"
+                android:layout_above="@+id/imageViewPostureGood"
+                android:text="Good"
+                android:id="@+id/goodPosture"
+                />
+
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:id="@+id/text1Posture"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textSize="10dp"
+                android:textAlignment="center"
+                android:text = ""
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/layout_btn_over"
+        android:layout_below="@+id/layout_content_posture"
+        >
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:id="@+id/over_btn"
+            android:background="@color/buttonsMain"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avoid over striding"
+            android:textSize="15dp"
+            android:id="@+id/overHeaderText"
+            android:textColor="@color/colorBlack"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageOpen3"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:background="@color/colorTransparent"
+            android:layout_marginRight="20dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/layout_content_over"
+        android:layout_below="@+id/layout_btn_over"
+        android:background="@color/colorPrimary"
+        >
+
+
+        <TextView
+            android:id="@+id/content_Over"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentTop="true"
+            android:text=""
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/centerOver"
+            android:layout_centerHorizontal="true"
+            />
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/centerOver"
+            android:layout_alignParentRight="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/imageViewOverGood"
+                android:layout_above="@+id/imageViewOverGood"
+                android:text="Good"
+                android:id="@+id/goodOver"
+                />
+
+
+            <ImageView
+                android:id="@+id/imageViewOverGood"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/text1Over"
+                android:background="@color/colorTransparent"
+                />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:id="@+id/text1Over"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textSize="10dp"
+                android:text=""
+                android:textAlignment="center"
+                />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@+id/centerOver"
+            android:layout_alignParentLeft="true"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/imageViewOverBad"
+                android:layout_above="@+id/imageViewOverBad"
+                android:text="Bad"
+                android:id="@+id/badOver"
+                />
+
+            <ImageView
+                android:id="@+id/imageViewOverBad"
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/text2Over"
+                android:background="@color/colorTransparent"/>
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/text2Over"
+                android:textSize="10dp"
+                android:text=""
+                android:textAlignment="center"
+                />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
